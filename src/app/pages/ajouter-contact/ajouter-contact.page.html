@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Ajouter Contact
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form>
+    <ion-item>
+      <ion-label>
+        Nom :
+      </ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Prenom :
+      </ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Numero 1 :
+      </ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Numero 2 :
+      </ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Category :</ion-label>
+      <ion-select interface="action-sheet" placeholder="Select One">
+        <ion-select-option value="Amis">Amis</ion-select-option>
+        <ion-select-option value="famille">Famille</ion-select-option>
+        <ion-select-option value="Professionnel">Professionnel</ion-select-option>
+        <ion-select-option value="Autre">Autre</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="block" shape="round" class="ion-margin-top" (click)="onSubmit()">
+      save
+    </ion-button>
+  </form>
+</ion-content>

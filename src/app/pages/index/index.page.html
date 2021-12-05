@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title align="center">
+      Contacts
+    </ion-title>
+    <ion-buttons fill="clear" slot="end" (click)="recherche()">
+      <ion-icon name="search" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let contact of contacts; let i=index">
+    <ion-item lines="none">
+      <div class="index" slot="start">
+        {{i}}
+      </div>
+      <ion-label (click)="detail(contact.nom)">
+        <h2>
+          <ion-text>{{contact.nom}} {{contact.prenom}}</ion-text>
+        </h2>
+        <p>
+          <ion-text>
+            {{contact.num1}}
+          </ion-text>
+        </p>
+        <p>
+          <ion-text>
+            {{contact.num2}}
+          </ion-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button (click)="onClickAdd()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

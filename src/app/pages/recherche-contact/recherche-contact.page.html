@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-searchbar (input)="getItems($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let contact of contacts; let i=index">
+    <ion-item lines="none">
+      <div class="index" slot="start">
+        {{i}}
+      </div>
+      <ion-label (click)="detail(contact.nom)">
+        <h2>
+          <ion-text>{{contact.nom}} {{contact.prenom}}</ion-text>
+        </h2>
+        <p>
+          <ion-text>
+            {{contact.num1}}
+          </ion-text>
+        </p>
+        <p>
+          <ion-text>
+            {{contact.num2}}
+          </ion-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+</ion-content>
